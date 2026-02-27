@@ -1,14 +1,11 @@
-# Render Blueprint: optional. If you use "New Web Service" and set root to backend,
-# the runtime.txt in backend/ is enough. This file documents the backend service for
-# infrastructure-as-code or deploy from repo with auto-detect.
+# Render Blueprint: use Docker so Python 3.11 is fixed (avoids Python 3.14 / pydantic build errors)
 services:
   - type: web
     name: support-agent-api
-    runtime: python
-    rootDir: backend
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
     plan: free
-    buildCommand: pip install -r requirements.txt
-    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: OPENAI_API_KEY
         sync: false

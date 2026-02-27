@@ -45,20 +45,24 @@ Step-by-step for **Option 4**: backend on Railway or Render, frontend on Vercel 
 
 ### B. Using Render (alternative)
 
-1. Go to [render.com](https://render.com) and sign in.
-2. **New +** → **Web Service**.
-3. Connect your GitHub repo and select it.
-4. Configure:
-   - **Name:** e.g. `support-agent-api`.
-   - **Root Directory:** `backend`.
-   - **Runtime:** Python 3.
-   - **Build Command:** `pip install -r requirements.txt`
-   - **Start Command:** `uvicorn main:app --host 0.0.0.0 --port $PORT`
-   - **Instance Type:** Free (or paid).
-5. **Environment** → **Add Environment Variable:**  
-   - Key: `OPENAI_API_KEY`  
-   - Value: your OpenAI API key.
-6. Click **Create Web Service**. When it’s live, copy the URL (e.g. `https://support-agent-api.onrender.com`).
+Render’s **Docker** runtime is recommended so the backend uses Python 3.11 and avoids pydantic build errors (Render’s default Python can be 3.14).
+
+**Option 1 – Deploy with Blueprint (repo has render.yaml)**  
+1. Go to [render.com](https://render.com) → **New +** → **Blueprint**.  
+2. Connect your GitHub repo. Render will read `render.yaml` and create a **Docker** web service (backend).  
+3. Add **OPENAI_API_KEY** in the service **Environment** tab.  
+4. Deploy. Copy the service URL (e.g. `https://support-agent-api.onrender.com`).
+
+**Option 2 – Create Web Service manually (Docker)**  
+1. **New +** → **Web Service** → connect repo.  
+2. **Runtime:** choose **Docker**.  
+3. **Dockerfile Path:** `backend/Dockerfile`  
+4. **Docker Context:** `backend`  
+5. **Instance Type:** Free. Add **OPENAI_API_KEY** in Environment.  
+6. **Create Web Service**. Copy the URL.
+
+**If you already have a Python service and see the pydantic / “Preparing metadata” error:**  
+In the service **Settings** → **Build & Deploy**: change **Runtime** to **Docker**, set **Dockerfile Path** to `backend/Dockerfile` and **Docker Context** to `backend`, save, then **Manual Deploy** → **Clear build cache & deploy**.
 
 **Backend URL to use later:** `https://your-service-name.onrender.com` (no trailing slash).
 
