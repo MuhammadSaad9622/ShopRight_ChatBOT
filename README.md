@@ -119,16 +119,8 @@ The frontend container proxies `/chat` and `/health` to the backend.
 - *"Where is order #123?"* → Tool call `get_order_status("123")` → answer with status and tracking.
 - *"My order number is 456."* then *"What is its status?"* → History includes order 456; model calls the tool for 456 and answers.
 
-## Deployment
 
-Deploy the backend with **OPENAI_API_KEY** set; the frontend needs **VITE_API_URL** pointing to the backend URL if they are on different domains.
 
-- **Option 1 – Docker on a VPS:** Install Docker and Docker Compose on a server (e.g. Ubuntu). Clone the repo, set `OPENAI_API_KEY` in `backend/.env`, run `docker compose up --build -d`. Frontend on port 80, backend on 8000. Put Nginx or Caddy in front for HTTPS.
-- **Option 2 – Railway:** Deploy backend (root `backend`, start `uvicorn main:app --host 0.0.0.0 --port $PORT`, add OPENAI_API_KEY). Deploy frontend (root `frontend`, build `npm run build`, set VITE_API_URL to backend URL at build time, serve `dist`).
-- **Option 3 – Render:** Backend as Web Service (root `backend`), frontend as Static Site (root `frontend`, VITE_API_URL at build time, publish `dist`).
-- **Option 4 – Vercel/Netlify + backend elsewhere:** Deploy backend on Railway/Render/VPS. Deploy frontend on Vercel or Netlify with VITE_API_URL set to the backend URL when building. See **[DEPLOYMENT.md](DEPLOYMENT.md)** for step-by-step instructions.
-
-**Checklist:** OPENAI_API_KEY on backend; VITE_API_URL on frontend build if split; use HTTPS in production.
 
 ## License
 
