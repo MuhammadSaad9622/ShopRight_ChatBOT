@@ -1,0 +1,14 @@
+# Render Blueprint: optional. If you use "New Web Service" and set root to backend,
+# the runtime.txt in backend/ is enough. This file documents the backend service for
+# infrastructure-as-code or deploy from repo with auto-detect.
+services:
+  - type: web
+    name: support-agent-api
+    runtime: python
+    rootDir: backend
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false

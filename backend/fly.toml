@@ -1,0 +1,22 @@
+# Fly.io app config for the support-agent backend
+# Deploy from the backend directory: fly launch  (first time) then  fly deploy
+
+app = "support-agent-api"
+
+[build]
+
+[env]
+  PORT = "8000"
+
+[http_service]
+  internal_port = 8000
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ["app"]
+
+[[vm]]
+  memory = "256mb"
+  cpu_kind = "shared"
+  cpus = 1
