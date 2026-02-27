@@ -1,0 +1,18 @@
+# Backend
+backend/venv/
+backend/__pycache__/
+backend/*.pyc
+backend/.env
+backend/chroma_db/
+backend/support_agent.db
+backend/*.db
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# IDE / OS
+.env
+.idea/
+.DS_Store
+*.log

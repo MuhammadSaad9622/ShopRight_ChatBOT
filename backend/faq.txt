@@ -1,0 +1,25 @@
+# ShopRight E-Commerce – Company Policies & FAQ
+
+## Returns and Refunds
+
+ShopRight offers a 30-day return policy for most items. To initiate a return, log into your account, go to Order History, and select "Request Return" for the eligible order. Items must be unused, in original packaging, and in resalable condition. Once we receive and inspect your return (typically within 5–7 business days), we will process your refund to the original payment method within 10 business days. Refunds may take an additional 3–5 business days to appear on your statement depending on your bank. Custom or personalized items, perishables, and certain electronics may be excluded from our standard return policy; check the product page for details.
+
+## Shipping and Delivery
+
+Standard shipping is free on orders over $50; otherwise a flat rate of $5.99 applies. Orders placed before 2:00 PM local time (Monday–Friday) are typically shipped the same business day. Domestic delivery usually takes 3–5 business days for standard shipping and 1–2 business days for express shipping (additional fee). International shipping is available to select countries and typically takes 7–14 business days. You will receive a tracking number via email once your order ships. Delays due to weather, customs, or carrier issues are outside our control, but we will assist you in tracking your package.
+
+## Warranty Information
+
+Most electronics and eligible items come with a 1-year manufacturer warranty from the date of delivery. This covers defects in materials and workmanship under normal use. To make a warranty claim, contact our support team with your order number and a description of the issue; we may ask for photos or video. Warranty does not cover damage from misuse, accidents, or unauthorized repairs. Extended warranty options (2 or 3 years) can be added at checkout for qualifying products and are administered by our third-party warranty provider.
+
+## Order Modifications and Cancellations
+
+You may modify or cancel an order within 1 hour of placing it by visiting your account or contacting support. After that window, we cannot guarantee changes because the order may already be in our fulfillment pipeline. If your order has not yet shipped, we will do our best to accommodate cancellation requests—contact us as soon as possible. Once an order has shipped, it cannot be cancelled; you may refuse delivery or return the item per our return policy. Address changes are only possible before the order ships.
+
+## Payment and Security
+
+We accept major credit cards (Visa, Mastercard, American Express), debit cards, PayPal, and ShopRight gift cards. All payments are processed over encrypted connections. We do not store full credit card numbers on our servers. For subscription or recurring orders, you may update or remove your payment method at any time in Account Settings. If a charge fails, we will retry up to three times and notify you by email; update your payment method to avoid service interruption.
+
+## Customer Support and Contact
+
+Our support team is available Monday–Friday, 9:00 AM–6:00 PM (your local timezone), and Saturday 10:00 AM–4:00 PM. You can reach us via live chat on the website, email at support@shopright.com, or phone at 1-800-SHOP-RIGHT. For order status and tracking, use the "Order Status" tool or check your account. Response times are typically under 24 hours for email and within a few minutes for live chat during business hours.
