@@ -12,7 +12,8 @@ frontend/node_modules/
 frontend/dist/
 
 # IDE / OS
-.env
 .idea/
 .DS_Store
 *.log
+config.bat
+node_modules
